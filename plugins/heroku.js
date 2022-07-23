@@ -7,7 +7,7 @@ const baseURI = '/apps/' + Config.HEROKU_APP_NAME
 
 bot(
 	{
-		pattern: 'restart',
+		pattern: 'إعداد',
 		fromMe: true,
 		desc: 'Restart Dyno',
 		type: 'heroku',
@@ -22,7 +22,7 @@ bot(
 
 bot(
 	{
-		pattern: 'shutdown',
+		pattern: 'تعطيل',
 		fromMe: true,
 		desc: 'Dyno off',
 		type: 'heroku',
@@ -189,7 +189,7 @@ bot(
 
 bot(
 	{
-		pattern: 'update$',
+		pattern: 'تحديث$',
 		fromMe: true,
 		desc: 'Check new updates.',
 		type: 'heroku',
@@ -203,7 +203,7 @@ bot(
 
 bot(
 	{
-		pattern: 'update now$',
+		pattern: 'تثبيت التحديث$',
 		fromMe: true,
 		desc: 'To-Up-Date bot.',
 		type: 'heroku',
@@ -212,7 +212,7 @@ bot(
 		const isupdate = await isUpdate()
 		if (!isupdate.length)
 			return await message.sendMessage(
-				'*Bot is up-to-date.*\n*Nothing to Update.*'
+				'*تم تحديث البوت لاخر إصدار بالفعل!.*\n*لاتوجد تحديثات.*'
 			)
 		await message.sendMessage('_Updating..._')
 		const e = await updateNow()
