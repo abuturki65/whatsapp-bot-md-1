@@ -2,9 +2,9 @@ const { bot, aliveMessage } = require('../lib/')
 
 bot(
 	{
-		pattern: 'alive ?(.*)',
+		pattern: 'شغال ?(.*)',
 		fromMe: true,
-		desc: 'bot alive message',
+		desc: 'معرفة ما إذا كان البوت يعمل أم لا',
 		type: 'misc',
 	},
 	async (message, match) => {
