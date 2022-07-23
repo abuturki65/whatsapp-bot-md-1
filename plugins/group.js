@@ -10,9 +10,9 @@ const fm = true
 
 bot(
 	{
-		pattern: 'kick ?(.*)',
+		pattern: 'طرد ?(.*)',
 		fromMe: fm,
-		desc: 'Remove members from Group.',
+		desc: 'لطرد عضو من المجموعة.',
 		type: 'group',
 		onlyGroup: true,
 	},
@@ -42,9 +42,9 @@ bot(
 
 bot(
 	{
-		pattern: 'add ?(.*)',
+		pattern: 'اضافة ?(.*)',
 		fromMe: true,
-		desc: 'To add members',
+		desc: 'لاضافة اعضاء',
 		type: 'group',
 		onlyGroup: true,
 	},
@@ -53,7 +53,7 @@ bot(
 		const isImAdmin = await isAdmin(participants, message.client.user.jid)
 		if (!isImAdmin) return await message.sendMessage(`_I'm not admin._`)
 		match = match || message.reply_message.jid
-		if (!match) return await message.sendMessage('Example : add 91987654321')
+		if (!match) return await message.sendMessage('Example : اضافة 966536262789')
 		match = jidToNum(match)
 		const res = await message.Add(match)
 		if (res == '403') return await message.sendMessage('_Failed, Invite sent_')
@@ -64,9 +64,9 @@ bot(
 
 bot(
 	{
-		pattern: 'promote ?(.*)',
+		pattern: 'رفع رتبه ?(.*)',
 		fromMe: fm,
-		desc: 'Give admin role.',
+		desc: 'لإعطائه صلاحيه المشرف .',
 		type: 'group',
 		onlyGroup: true,
 	},
@@ -85,9 +85,9 @@ bot(
 
 bot(
 	{
-		pattern: 'demote ?(.*)',
+		pattern: 'تنزيل رتبه ?(.*)',
 		fromMe: fm,
-		desc: 'Remove admin role.',
+		desc: 'لحذف صلاحيه الاشراف من المشرف.',
 		type: 'group',
 		onlyGroup: true,
 	},
@@ -106,9 +106,9 @@ bot(
 
 bot(
 	{
-		pattern: 'invite ?(.*)',
+		pattern: 'دعوة ?(.*)',
 		fromMe: fm,
-		desc: 'Get Group invite',
+		desc: 'لإرسال رابط المجموعة',
 		type: 'group',
 		onlyGroup: true,
 	},
@@ -122,9 +122,9 @@ bot(
 
 bot(
 	{
-		pattern: 'mute ?(.*)',
+		pattern: 'قفل ?(.*)',
 		fromMe: fm,
-		desc: 'Makes Groups Admins Only.',
+		desc: 'لجعل المجموعه للمشرفين فقط.',
 		type: 'group',
 		onlyGroup: true,
 	},
@@ -143,9 +143,9 @@ bot(
 
 bot(
 	{
-		pattern: 'unmute ?(.*)',
+		pattern: 'فتح ?(.*)',
 		fromMe: fm,
-		desc: 'Makes Group All participants can send Message.',
+		desc: 'لجعل جميع الاعضاء يدردشون.',
 		type: 'group',
 		onlyGroup: true,
 	},
@@ -159,10 +159,10 @@ bot(
 
 bot(
 	{
-		pattern: 'join ?(.*)',
+		pattern: 'دخول ?(.*)',
 		fromMe: fm,
 		type: 'group',
-		desc: 'Join invite link.',
+		desc: 'لجعل البوت يدجل المجموعه.',
 	},
 	async (message, match) => {
 		match = match || message.reply_message.text
@@ -181,11 +181,11 @@ bot(
 
 bot(
 	{
-		pattern: 'revoke',
+		pattern: 'حذف',
 		fromMe: fm,
 		onlyGroup: true,
 		type: 'group',
-		desc: 'Revoke Group invite link.',
+		desc: 'لحذف رابط المجموعه.',
 	},
 	async (message, match) => {
 		const participants = await message.groupMetadata(message.jid)
@@ -197,10 +197,10 @@ bot(
 
 bot(
 	{
-		pattern: 'ginfo ?(.*)',
+		pattern: 'معلومات ?(.*)',
 		fromMe: fm,
 		type: 'group',
-		desc: 'Shows group invite info',
+		desc: 'لحصول على معلومات المجموعة',
 	},
 	async (message, match) => {
 		match = match || message.reply_message.text
