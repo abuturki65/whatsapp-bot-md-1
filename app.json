@@ -5,7 +5,7 @@
 		"whatsapp",
 		"bot"
 	],
-	"repository": "https://github.com/lyfe0010/whatsapp-bot-md",
+	"repository": "https://github.com/abuturki65/whatsapp-bot-md-1",
 	"stack": "container",
 	"env": {
 		"ALWAYS_ONLINE": {
