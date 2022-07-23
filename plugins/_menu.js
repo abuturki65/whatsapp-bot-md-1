@@ -11,26 +11,26 @@ const {
 const { VERSION } = require('../config')
 bot.addCommand(
 	{
-		pattern: 'help ?(.*)',
+		pattern: 'مساعدة ?(.*)',
 		fromMe: true,
 		dontAddCommandList: true,
 	},
 	async (message, match) => {
 		const date = new Date()
 		let CMD_HELP = `╭────────────────╮
-						ʟᴇᴠᴀɴᴛᴇʀ
+						تم تطويره من أبو فيصل
 ╰────────────────╯
 
 ╭────────────────
-│ Prefix : ${PREFIX}
-│ User : ${message.pushName}
-│ Time : ${date.toLocaleTimeString()}
-│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
-│ Date : ${date.toLocaleDateString('hi')}
-│ Version : ${VERSION}
-│ Plugins : ${PLUGINS.count}
-│ Ram : ${getRam()}
-│ Uptime : ${getUptime('t')}
+│ الشفرة : ${PREFIX}
+│ المستخدم : ${message.pushName}
+│ الوقت : ${date.toLocaleTimeString()}
+│ اليوم : ${date.toLocaleString('en', { weekday: 'long' })}
+│ التاريخ : ${date.toLocaleDateString('hi')}
+│ الإصدار : ${VERSION}
+│ الإضافات : ${PLUGINS.count}
+│ الرام : ${getRam()}
+│ مدة التشغيل : ${getUptime('t')}
 ╰────────────────
 ╭────────────────
 `
@@ -56,7 +56,7 @@ bot.addCommand(
 
 bot.addCommand(
 	{
-		pattern: 'list ?(.*)',
+		pattern: 'القائمة ?(.*)',
 		fromMe: true,
 		dontAddCommandList: true,
 	},
@@ -75,7 +75,7 @@ bot.addCommand(
 )
 bot.addCommand(
 	{
-		pattern: 'menu ?(.*)',
+		pattern: 'الاوامر ?(.*)',
 		fromMe: true,
 		dontAddCommandList: true,
 	},
@@ -94,17 +94,17 @@ bot.addCommand(
 
 		let msg =
 			'```' +
-			`╭═══ LEVANTER ═══⊷
+			`╭═══ تم تطويره من أبو فيصل ═══⊷
 ┃❃╭──────────────
-┃❃│ Prefix : ${PREFIX}
-┃❃│ User : ${message.pushName}
-┃❃│ Time : ${date.toLocaleTimeString()}
-┃❃│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
-┃❃│ Date : ${date.toLocaleDateString('hi')}
-┃❃│ Version : ${VERSION}
-┃❃│ Plugins : ${PLUGINS.count}
-┃❃│ Ram : ${getRam()}
-┃❃│ Uptime : ${getUptime('t')}
+┃❃│ الشفرة : ${PREFIX}
+┃❃│ المستخدم : ${message.pushName}
+┃❃│ الوقت : ${date.toLocaleTimeString()}
+┃❃│ اليوم : ${date.toLocaleString('en', { weekday: 'long' })}
+┃❃│ التاريخ : ${date.toLocaleDateString('hi')}
+┃❃│ الإصدار : ${VERSION}
+┃❃│ الإضافات : ${PLUGINS.count}
+┃❃│ الرام : ${getRam()}
+┃❃│ مدة التشغيل : ${getUptime('t')}
 ┃❃╰───────────────
 ╰═════════════════⊷
 ` +
